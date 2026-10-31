@@ -12,8 +12,8 @@ class Customcontainer extends StatelessWidget {
       height: size,
       width: size,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-         colors: [Colors.blue, Colors.purple,Colors.cyan],
+        gradient: RadialGradient(
+         colors: [Colors.blue, Colors.purple,Colors.indigo],
         ),
         borderRadius: BorderRadius.circular(CirularRate),
       ),

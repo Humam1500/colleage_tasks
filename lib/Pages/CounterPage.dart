@@ -32,13 +32,15 @@ class _CounterpageState extends State<Counterpage> {
               fontWeight: FontWeight.bold,
             ),
             'Counter: $counter'),
+            SizedBox(height: 30,),
           IconButton(
             onPressed: (){
               _increment();
             }, 
-            icon: Icon(
-              
-              Icons.add,size: 24,)
+            icon: CircleAvatar(
+              child: Icon(
+                Icons.add,size: 24,),
+            )
             ),
         ],
       ),

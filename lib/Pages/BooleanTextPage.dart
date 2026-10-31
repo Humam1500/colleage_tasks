@@ -28,9 +28,11 @@ class _BooleantextpageState extends State<Booleantextpage> {
               style: TextStyle(
                 fontSize: 30,
                 fontWeight:FontWeight.bold,
+                color: Show_detials?Colors.green:Colors.red,
               ),
               
-              Show_detials?'Choice A':'Choice B'),
+              Show_detials?'Flutter is easy':'Flutter is hard to learn',
+              ),
               SizedBox(height: 30,),
               ElevatedButton(
                 onPressed: (){
@@ -38,7 +40,7 @@ class _BooleantextpageState extends State<Booleantextpage> {
                 }, 
                 child:Text(
                 style: TextStyle(fontSize: 20,),
-                'Change Text')
+                'Make it Easy'),
                 ),
           ],
         ),
