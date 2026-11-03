@@ -4,11 +4,14 @@ class Resultscreen extends StatelessWidget {
   const Resultscreen({
     super.key,
     required this.isCorrect,
-    required this.onRestart,
+    required this.onRestart, 
+    required this.score,
   });
 
   final bool isCorrect;
   final VoidCallback onRestart;
+  final int score;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +31,15 @@ class Resultscreen extends StatelessWidget {
             fontSize: 18,
           ),
           'Try Again')
+          ),
+
+          Text(
+           'Your score: $score',
+           style: TextStyle(
+            fontSize: 19,
+            fontWeight: FontWeight.bold,
+            color: score==0||score==1?Colors.red:score==2?Colors.amber:Colors.green
+           ), 
           ),
       ],
     );

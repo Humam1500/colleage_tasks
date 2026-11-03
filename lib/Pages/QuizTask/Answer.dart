@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   const Answer({super.key, required this.onAnswer});
-  final Function(bool) onAnswer;
-  final bool isCorrect=false;
+  final void Function(bool) onAnswer;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +44,7 @@ class Answer extends StatelessWidget {
                 'False',)
               ),
 
-              
+
           ],
         ),
       ),

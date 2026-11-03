@@ -14,6 +14,7 @@ class Quizpage extends StatefulWidget {
 class _QuizpageState extends State<Quizpage> {
   int stage=0;
   bool _isCorrect=false;
+  int score=0;
   void _startQuiz(){
     setState(() {
       stage=1;
@@ -23,15 +24,16 @@ class _QuizpageState extends State<Quizpage> {
     void _answer(bool isCorrect){
       setState(() {
         _isCorrect=isCorrect;
+        if (isCorrect) score++;
         stage=isCorrect ? 2 : 4;
       });
       
-
     }
 
     void _answer2(bool isCorrect){
       setState(() {
         _isCorrect=isCorrect;
+        if (isCorrect) score++;
         stage=isCorrect ? 3 : 4;
       });
     }
@@ -39,6 +41,7 @@ class _QuizpageState extends State<Quizpage> {
     void _answer3(bool isCorrcet){
       setState(() {
         _isCorrect=isCorrcet;
+        if (isCorrcet) score++;
         stage=4;
       });
     }
@@ -48,9 +51,12 @@ class _QuizpageState extends State<Quizpage> {
     void restart(){
       setState(() {
         _isCorrect=false;
+        score=0;
         stage=0;
       });
     }
+
+    
 
     
 
@@ -65,7 +71,11 @@ class _QuizpageState extends State<Quizpage> {
         return Answer3(onAnswer: _answer3);
       }
       else{
-        return Resultscreen(isCorrect: _isCorrect, onRestart: restart);
+        return Resultscreen(
+          isCorrect: _isCorrect, 
+          onRestart: restart,
+          score: score,
+          );
       }
 
 

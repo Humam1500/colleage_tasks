@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Answer3 extends StatelessWidget {
   const Answer3({super.key, required this.onAnswer});
-  final Function onAnswer;
+  final void Function(bool) onAnswer;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

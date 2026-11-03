@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Startquiz extends StatelessWidget {
-  const Startquiz({super.key,required this.onStartQuiz});
-  final VoidCallback? onStartQuiz;
+  const Startquiz({super.key, required this.onStartQuiz,});
+
+final VoidCallback onStartQuiz;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
