@@ -1,3 +1,4 @@
+import 'package:colleage_tasks/Pages/RadioButtonTask/AboutPage.dart';
 import 'package:flutter/material.dart';
 import 'package:colleage_tasks/Pages/RadioButtonTask/Radio.dart' hide Radio;
 class Mainpage extends StatefulWidget {
@@ -30,14 +31,28 @@ String GetSelectedText() {
   }else {
     return _selectedText!;
   }
-
-
 }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(onPressed: (){
+              Navigator.push(
+                context,
+              MaterialPageRoute(builder: (_)=>Aboutpage())
+              );
+            }, icon: Icon(
+              Icons.info,
+              size: 30,
+              color: Colors.blueAccent,
+              )
+              ),
+          )
+        ],
         title: Text('Radio Button Task'),
       ),
       body: Center(

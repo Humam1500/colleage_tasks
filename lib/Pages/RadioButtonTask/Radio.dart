@@ -1,11 +1,12 @@
+import 'package:colleage_tasks/Pages/RadioButtonTask/AboutPage.dart';
 import 'package:flutter/material.dart';
 
 class RadioButton extends StatelessWidget {
   final String? current;
-  static const options = ['Good', 'Bad', 'Average'];
+  static const options = ['Good', 'Bad', 'Not bad'];
 
   const RadioButton({super.key,  this.current});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
